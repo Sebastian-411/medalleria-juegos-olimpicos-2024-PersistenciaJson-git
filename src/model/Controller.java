@@ -25,7 +25,7 @@ public class Controller {
             throw new InvalidSyntaxException();
         }
         for(CountryReport country : countries){
-            if ( country.getName().equals(tmp[0])){
+            if ( country.getName().equalsIgnoreCase(tmp[0])){
                 return country.countMedals(tmp[1], medals);
             }
         }
